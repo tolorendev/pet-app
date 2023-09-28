@@ -1,0 +1,92 @@
+:root {
+  --color-main-1: #22b8cf;
+  --color-main-2: #1098ad;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fafafa;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ============================ */
+/* Side Navigation bar */
+/* ============================ */
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  /* height: 100vh; */
+}
+#sidenavbar {
+  min-width: 80px;
+  background-color: var(--color-main-1);
+}
+
+#sidenavbar.active {
+  min-width: 250px;
+}
+
+#sidenavbar .logo {
+  cursor: pointer;
+  background-color: var(--color-main-2);
+}
+
+#sidenavbar.active #logo-2 {
+  display: block !important;
+}
+#sidenavbar.active #logo-1 {
+  display: none !important;
+}
+
+#sidenavbar ul {
+  padding: 0;
+  margin-top: 12px;
+}
+
+#sidenavbar ul li a {
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  transition: all ease 0.2s;
+}
+#sidenavbar.active ul li a {
+  padding: 8px 16px;
+  gap: 12px;
+  flex-direction: row;
+  justify-content: start;
+}
+
+#sidenavbar ul li:not(.active) a:hover {
+  background-color: #fff;
+  color: var(--color-main-1);
+}
+
+#sidenavbar ul li.active a {
+  background-color: var(--color-main-2);
+}
+
+#sidenavbar ul li a i {
+  font-size: 24px;
+}
+
+/* ============================ */
+/* Page Content */
+/* ============================ */
+
+.wrapper #content {
+  width: 100%;
+  min-height: 100vh;
+}

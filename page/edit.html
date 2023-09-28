@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet App</title>
+
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      table .bi-check-circle-fill {
+        color: green;
+      }
+
+      table .bi-x-circle-fill {
+        color: red;
+      }
+
+      table .btn.btn-danger {
+        font-size: 14px;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="" id="sidenavbar">
+        <div class="p-3 logo text-white fs-3 d-flex align-items-center">
+          <div id="logo-1" class="mx-auto"><i class="bi bi-list"></i></div>
+          <div id="logo-2" class="d-none">
+            <i class="bi bi-envelope-paper-heart-fill"></i>
+            <span class="fw-semibold ms-2">Pet App</span>
+          </div>
+        </div>
+        <ul>
+          <li class="">
+            <a href="../index.html"><i class="bi bi-house"></i>Home</a>
+          </li>
+          <li class="active">
+            <a href="./edit.html"><i class="bi bi-pencil-square"></i>Edit</a>
+          </li>
+          <li>
+            <a href="./search.html"><i class="bi bi-search"></i>Search</a>
+          </li>
+          <li>
+            <a href="./breed.html"><i class="bi bi-list-task"></i>Breed</a>
+          </li>
+          <li>
+            <a href="./data.html"><i class="bi bi-clipboard-data"></i> Data</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content -->
+      <div id="content">
+        <div class="container-fluid">
+          <p class="text-secondary fs-4 p-3 mt-2 px-5 bg-light border-bottom">
+            Edit Pet
+          </p>
+        </div>
+
+        <div class="container mb-3" id="main">
+          <div
+            class="row align-items-center justify-content-center hide"
+            id="container-form"
+          >
+            <div class="col-lg-6">
+              <form action="">
+                <div class="row mb-3">
+                  <label for="input-id" class="col-form-label col-sm-3"
+                    >Pet ID</label
+                  >
+                  <div class="col-sm-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Input ID"
+                      id="input-id"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="input-name" class="col-form-label col-sm-3"
+                    >Pet Name</label
+                  >
+                  <div class="col-sm-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Input Name"
+                      id="input-name"
+                    />
+                  </div>
+
+                  <label
+                    for="input-age"
+                    class="col-form-label col-sm-1 text-end"
+                    >Age</label
+                  >
+                  <div class="col-sm-3">
+                    <input
+                      type="number"
+                      min="1"
+                      class="form-control"
+                      placeholder="Input Age"
+                      id="input-age"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="input-type" class="col-form-label col-sm-3"
+                    >Type</label
+                  >
+
+                  <div class="col-sm-9">
+                    <select class="form-control" id="input-type">
+                      <option>Select Type</option>
+                      <option>Dog</option>
+                      <option>Cat</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="input-weight" class="col-form-label col-sm-3"
+                    >Weight</label
+                  >
+                  <div class="col-sm-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Input Weight"
+                      id="input-weight"
+                    />
+                  </div>
+                  <label
+                    for="input-length"
+                    class="col-form-label col-sm-3 text-end"
+                    >Length</label
+                  >
+                  <div class="col-sm-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Input Length"
+                      id="input-length"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="input-color-1" class="col-form-label col-sm-3"
+                    >Color</label
+                  >
+                  <div class="col-sm-3">
+                    <input
+                      type="color"
+                      name=""
+                      id="input-color-1"
+                      class="form-control"
+                    />
+                  </div>
+                  <label
+                    for="input-breed"
+                    class="col-form-label col-sm-3 text-end"
+                    >Breed</label
+                  >
+                  <div class="col-sm-3">
+                    <select id="input-breed" class="form-control">
+                      <option value="">1</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-3">
+                    <input type="checkbox" id="input-vaccinated" />
+                    <label for="input-vaccinated" class="form-label"
+                      >Vaccinated</label
+                    >
+                  </div>
+                  <div class="col-sm-3">
+                    <input type="checkbox" id="input-dewormed" />
+                    <label for="input-dewormed" class="form-label"
+                      >Dewormed</label
+                    >
+                  </div>
+                  <div class="col-sm-3">
+                    <input type="checkbox" id="input-sterilized" />
+                    <label for="input-sterilized" class="form-label"
+                      >Sterilized</label
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit" id="submit-btn">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Type</th>
+                <th>Weight</th>
+                <th>Length</th>
+                <th>Breed</th>
+                <th>Color</th>
+                <th>Vaccinated</th>
+                <th>Dewormed</th>
+                <th>Sterilized</th>
+
+                <th>Date Added</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/storage.js"></script>
+    <script src="../script/edit.js"></script>
+  </body>
+</html>
